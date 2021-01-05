@@ -9,44 +9,8 @@
 
 <body>
   <h1>FUNCIONES JS</h1>
-  <script>
-    //si se crea la funcion asi lo que ocurre es que la podes invocar antes de que la tengas creada.
 
-    function unaFuncion() {
-      console.log("uno");
-      console.log("dos");
-      console.log("tres");
-      return 4
-    }
-
-    let resultado = unaFuncion() + 2
-    console.log(resultado)
-
-    //funcion anonima
-    //si se crea la funcion asi se puede invocar despues de que la funcion haya sido creada, antes no
-    const funcionExpresada = function () {
-      console.log("Esto es una funcion expresada, es decir una funcion que se le ha a agreado como valor a una variable, si la llamamos antes de su definicion JS nos lanza un error")
-
-    }
-
-    console.log(funcionExpresada())
-
-    //declaracion de arreglos con []
-    let array = ["Hola", 1, 2, 3, [4, 5, 6]];
-    console.log(array);
-
-    const colores = ["Rojo", "Negro", "Blanco"];
-    colores.push("Amarillo");
-
-
-    //el primer parametro es el valor "el = elemento" y el segundo elemento es el "index = indice"
-    colores.forEach(function (el, index) {
-      console.log(`<li id="${index}">${el}</li>`)
-
-    });
-
-  </script>
-
+  <script src="index.js"></script>
 </body>
 
 </html>
