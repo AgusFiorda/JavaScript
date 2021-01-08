@@ -65,17 +65,19 @@
       this.pasatiempos=pasatiempos;
 
       this.saludar=function () {
-        return `${this.nombre} ${this.apellido}`
+        console.log(`Hola mi nombre es ${this.nombre} y mi apellido es ${this.apellido}`)
       }
     }
 
     const p1= new Persona();
+    //el prompt es para escribir el nombre por consola
 
-    /*p1.nombre=prompt("escriba su nombre: ");
+   /*  p1.nombre=prompt("escriba su nombre: ");
     p1.apellido=prompt("escriba su nombre: ");
     p1.soltero=prompt("es soltero?: ");
-    p1.pasatiempos=[prompt("escriba sus pasatiempos: ")];
-  */
+    p1.pasatiempos=[prompt("escriba sus pasatiempos: ")]; */
+
+  
     const SuperPersona = function (nombre,apellido,edad,soltero,pasatiempo) {
 
       Persona.call(this,nombre,apellido,edad,soltero,pasatiempo)
@@ -83,6 +85,8 @@
       this.correrRapido=function(){return true};
       
     } 
+
+
     SuperPersona.prototype= Object.create(Persona.prototype);
     const p2 = new SuperPersona();
 
@@ -90,6 +94,21 @@
     p2.apellido="Panza";
     console.log("Corre rapido?",p2.correrRapido(),p2.saludar());
 
+    p1.nombre ="Agustin";
+    p1.apellido="Fiorda";
+    p1.edad=21;
+    p1.soltero=false
+    p1.pasatiempos=["entrenar","futbol"];
+    p1.saludar();
 
-    
+
+    //Muestra todas los valores de las llaves o atributos/funciones 
+    console.log(Object.values(p1));
+
+    //lISTA TODAS LAS LLAVES DE LOS objetos
+    console.log(Object.keys(p1));
+
+    //permite saber si el objeto tiene esa propiedad
+    console.log(p1.hasOwnProperty("nombre"))//true
+    console.log(p1.hasOwnProperty("nacimiento"))//false
 
