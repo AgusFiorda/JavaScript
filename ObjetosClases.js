@@ -102,6 +102,7 @@ class Perro extends Animal{
 constructor(nombre,genero,tamanio){
   super(nombre,genero);
   this.tamanio=tamanio;
+  this.raza=null; //lo ponemos nulo porque no lo vamos a inicializar ahora.
 
 }
 sonar(){
@@ -111,7 +112,20 @@ sonar(){
 ladrar(){
   console.log("gau gauuuu !!!")
 }
+//getter y seters 
+
+get getRaza(){
+  return this.raza;
 }
+set setRaza(raza){
+  this.raza=raza;
+}
+
+
+}
+
+
+
 
 
 const gato= new Animal("gatito","Hembra"),
@@ -123,3 +137,10 @@ gato.sonar();
 gato.saludar();
 bartolo.sonar();
 bartolo.ladrar();
+console.log(bartolo.getRaza);
+bartolo.setRaza = "Schnauser Mini";
+console.log(bartolo.getRaza);
+
+
+
+
