@@ -98,7 +98,7 @@ class Animal {
 
 } 
 //para que herede de animal se usa extends
-class Perro extends Animal{
+ class Perro extends Animal{
 constructor(nombre,genero,tamanio){
   super(nombre,genero);
   this.tamanio=tamanio;
@@ -128,7 +128,7 @@ set setRaza(raza){
 
 
 
-const gato= new Animal("gatito","Hembra"),
+  const gato= new Animal("gatito","Hembra"),
 bartolo=new Perro("Perro","Macho","pequeño");
 
 console.log(gato);
@@ -142,5 +142,18 @@ bartolo.setRaza = "Schnauser Mini";
 console.log(bartolo.getRaza);
 
 
+//borra todo lo que hay en la consola hasta el momento
+console.clear();
 
+
+ let alerta = alert("Esto es una alerta"),
+confirmacion = confirm("una confirmacion"),
+aviso =prompt("ingrese un valor");
+
+console.log(alerta);
+//si damos cancelar en confirmacion se pone en false y si ponemos aceptar pone true
+console.log(confirmacion);
+console.log(aviso);
+
+console.clear();
 
